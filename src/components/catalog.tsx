@@ -4,9 +4,10 @@ import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardHeader, CardTitle, CardContent, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { MessageSquare, Star, ArrowUpRight, ShieldCheck, Zap } from "lucide-react";
+import { MessageSquare, Star, ArrowUpRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
+import Image from "next/image";
 
 const products = [
   {
@@ -17,6 +18,7 @@ const products = [
     description: "La elección ideal para quienes buscan el más alto rendimiento y seguridad a altas velocidades.",
     accent: "text-blue-400",
     bg: "bg-blue-500/5",
+    image: "/images/toyo.png",
   },
   {
     brand: "WESTLAKE",
@@ -26,6 +28,7 @@ const products = [
     description: "Diseñada para vehículos particulares que buscan un equilibrio perfecto entre precio y seguridad.",
     accent: "text-green-400",
     bg: "bg-green-500/5",
+    image: "/images/westlake.png",
   },
   {
     brand: "KAYTOON",
@@ -35,6 +38,7 @@ const products = [
     description: "Nuestra opción más recomendada para el uso diario en Guayaquil por su excelente relación costo-beneficio.",
     accent: "text-primary",
     bg: "bg-primary/5",
+    image: "/images/kaytoon.png",
   },
   {
     brand: "COMPASAL",
@@ -44,6 +48,7 @@ const products = [
     description: "Una llanta robusta diseñada para enfrentar los desafíos de las vías locales con total confianza.",
     accent: "text-orange-400",
     bg: "bg-orange-500/5",
+    image: "/images/compasal.png",
   },
 ];
 
@@ -75,9 +80,15 @@ export function ProductCatalog() {
               transition={{ delay: index * 0.1 }}
             >
               <Card className="bg-white/[0.02] border-white/5 hover:border-primary/20 transition-all group h-full flex flex-col overflow-hidden relative">
-                {/* Decorative Brand Watermark */}
-                <div className="absolute -top-4 -right-4 opacity-[0.03] rotate-12 pointer-events-none">
-                   <h4 className="text-8xl font-black italic">{product.brand.split(' ')[0]}</h4>
+                {/* Product Image */}
+                <div className="relative h-64 overflow-hidden bg-black/40">
+                  <Image
+                    src={product.image}
+                    alt={product.brand + " " + product.model}
+                    fill
+                    className="object-contain p-4 group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
                 </div>
                 
                 <CardHeader className="p-8 pb-4">
@@ -87,7 +98,7 @@ export function ProductCatalog() {
                       {[1,2,3,4,5].map(s => <Star key={s} className="w-3 h-3 fill-primary text-primary" />)}
                     </div>
                   </div>
-                  <CardTitle className="text-3xl font-black uppercase italic tracking-tighter text-white group-hover:text-primary transition-colors">
+                  <CardTitle className="text-2xl font-black uppercase italic tracking-tighter text-white group-hover:text-primary transition-colors">
                     {product.model}
                   </CardTitle>
                 </CardHeader>
