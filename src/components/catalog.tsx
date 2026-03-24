@@ -56,12 +56,12 @@ export function ProductCatalog() {
   return (
     <section id="catalogo" className="py-32 bg-background relative overflow-hidden">
       <div className="container mx-auto px-4 relative z-10">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-20 gap-8">
           <div className="max-w-2xl text-left">
-            <h2 className="text-sm font-black text-primary tracking-[0.3em] uppercase mb-4">
+            <h2 className="text-xs sm:text-sm font-black text-primary tracking-[0.15em] sm:tracking-[0.3em] uppercase mb-4">
               NUESTRO CATÁLOGO SELECCIONADO
             </h2>
-            <h3 className="text-4xl md:text-6xl font-black uppercase italic tracking-tighter leading-none">
+            <h3 className="text-3xl sm:text-4xl md:text-6xl font-black uppercase italic tracking-tighter leading-none">
               Llantas que <span className="text-white">Transforman tu Viaje</span>
             </h3>
           </div>
@@ -140,7 +140,7 @@ export function ProductCatalog() {
            <p className="text-muted-foreground text-sm font-bold uppercase tracking-widest mb-6">¿Buscas otra medida o marca específica?</p>
            <a 
             href="https://wa.me/593963297021"
-            className={cn(buttonVariants({ variant: "default", size: "lg" }), "h-16 px-12 text-lg font-black rounded-2xl")}
+            className={cn(buttonVariants({ variant: "default", size: "lg" }), "h-16 px-6 sm:px-12 text-sm sm:text-lg font-black rounded-2xl text-center flex items-center justify-center")}
            >
              <MessageSquare className="mr-3 w-5 h-5" />
              VER CATÁLOGO COMPLETO

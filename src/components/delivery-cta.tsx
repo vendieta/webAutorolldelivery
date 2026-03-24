@@ -27,7 +27,7 @@ export function DeliveryCTA() {
               <Truck className="w-12 h-12 text-primary-foreground" />
             </div>
 
-            <h2 className="text-4xl md:text-7xl font-black text-primary-foreground uppercase tracking-tighter leading-none mb-6 italic">
+            <h2 className="text-2xl sm:text-4xl md:text-7xl font-black text-primary-foreground uppercase tracking-tighter leading-none mb-6 italic">
               ¡ENTREGA <span className="text-black italic">GRATIS</span><br /> EN TODO GUAYAQUIL!
             </h2>
 
@@ -38,14 +38,14 @@ export function DeliveryCTA() {
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <a 
                 href="https://wa.me/593963297021"
-                className={cn(buttonVariants({ variant: "default", size: "lg" }), "h-20 px-12 text-2xl font-black bg-black text-white hover:bg-black/90 border-none rounded-2xl shadow-2xl")}
+                className={cn(buttonVariants({ variant: "default", size: "lg" }), "h-20 px-6 sm:px-12 text-sm sm:text-2xl font-black bg-black text-white hover:bg-black/90 border-none rounded-2xl shadow-2xl uppercase")}
               >
                 <MessageSquare className="mr-3 w-6 h-6" />
                 PEDIR POR WHATSAPP
               </a>
               <a 
                 href="#servicios"
-                className={cn(buttonVariants({ variant: "outline", size: "lg" }), "h-20 px-12 text-2xl font-black bg-transparent border-black/20 text-black hover:bg-black/5 rounded-2xl")}
+                className={cn(buttonVariants({ variant: "outline", size: "lg" }), "h-20 px-6 sm:px-12 text-sm sm:text-2xl font-black bg-transparent border-black/20 text-black hover:bg-black/5 rounded-2xl uppercase")}
               >
                 VER MÁS
                 <ArrowRight className="ml-3 w-6 h-6" />

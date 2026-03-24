@@ -35,7 +35,7 @@ export function Hero() {
               ENVÍO GRATIS A TODO GUAYAQUIL
             </Badge>
 
-            <h1 className="text-6xl md:text-9xl font-black mb-6 leading-[0.8] tracking-tighter uppercase italic text-white drop-shadow-2xl">
+            <h1 className="text-4xl sm:text-6xl md:text-9xl font-black mb-6 leading-[0.9] md:leading-[0.8] tracking-tighter uppercase italic text-white drop-shadow-2xl">
               Rueda <span className="text-primary italic">Seguro</span>,<br />
               Rueda con <span className="text-white">AutoRoll</span>
             </h1>
@@ -47,14 +47,14 @@ export function Hero() {
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
               <a 
                 href="https://wa.me/593963297021"
-                className={cn(buttonVariants({ variant: "default", size: "lg" }), "h-16 px-10 text-lg font-black rounded-xl")}
+                className={cn(buttonVariants({ variant: "default", size: "lg" }), "h-16 px-6 sm:px-10 text-sm sm:text-lg font-black rounded-xl")}
               >
                 ORDENAR AHORA
                 <ArrowRight className="ml-2 w-5 h-5" />
               </a>
               <a 
                 href="#servicios"
-                className={cn(buttonVariants({ variant: "outline", size: "lg" }), "h-16 px-10 text-lg font-black rounded-xl border-white/20 bg-white/5 backdrop-blur-md")}
+                className={cn(buttonVariants({ variant: "outline", size: "lg" }), "h-16 px-6 sm:px-10 text-sm sm:text-lg font-black rounded-xl border-white/20 bg-white/5 backdrop-blur-md")}
               >
                 VER SERVICIOS
               </a>

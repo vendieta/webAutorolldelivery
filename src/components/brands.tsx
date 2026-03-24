@@ -21,12 +21,12 @@ export function Brands() {
         </h2>
       </div>
 
-      <div className="flex space-x-12 overflow-hidden group">
-        <div className="flex space-x-12 animate-marquee whitespace-nowrap group-hover:pause">
+      <div className="flex space-x-8 sm:space-x-12 overflow-hidden group">
+        <div className="flex space-x-8 sm:space-x-12 animate-marquee whitespace-nowrap group-hover:pause">
           {[...brands, ...brands].map((brand, i) => (
             <div
               key={i}
-              className="text-4xl md:text-5xl font-black text-muted-foreground/30 hover:text-primary transition-all cursor-default select-none tracking-tighter uppercase italic px-4"
+              className="text-2xl sm:text-4xl md:text-5xl font-black text-muted-foreground/30 hover:text-primary transition-all cursor-default select-none tracking-tighter uppercase italic px-4"
             >
               {brand}
             </div>

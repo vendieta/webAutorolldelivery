@@ -23,7 +23,7 @@ export function Navbar() {
           <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
             <span className="text-primary-foreground font-black text-xl italic drop-shadow-sm">A</span>
           </div>
-          <span className="font-heading font-black text-2xl uppercase tracking-tighter">
+          <span className="font-heading font-black text-xl sm:text-2xl uppercase tracking-tighter">
             AutoRoll<span className="text-primary">Delivery</span>
           </span>
         </div>
